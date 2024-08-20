@@ -2,6 +2,6 @@
 
 int main() {
     int idade = 10;
-    printf("Sua idade e: %d", idade);
+    printf("Sua idade %c: %d", 130, idade);
     return 0;
 }
