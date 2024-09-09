@@ -1,35 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    int n, num, maior, menor, soma = 0, i = 0;
-    float media;
 
-    printf("Quantos valores inteiros voce deseja inserir? \n");
-    scanf("%d", &n);
+    float sal;
+    float imposto;
 
-    do {
-        printf("Digite o valor %d:\n", i + 1);
-        scanf("%d", &num);
+    scanf("%f", &sal);
 
-        if (i == 0) {
-            maior = menor = num;
-        }
-        else {
-            if (num > maior) {
-                maior = num;
-            }
-            else if (num < menor) {
-                menor = num;
-            }
-        }
-        soma = soma + num;
-        i++;
-    } while (i < n);
-    media = (float) soma / n;
+    if (sal < 1212) {
+        imposto = 0.075;
+    }
+    else if (sal >= 1212.01 && sal <= 2427.35) {
+        imposto = 0.09;
+    }
+    else if (sal >= 2427.36 && sal <= 3641.03) {
+        imposto = 0.12;
+    }
+    else if (sal >= 3641.04 && sal <= 7087.22) {
+        imposto = 0.14;
+    }
+    else {
+        imposto = 828,39;
+    }
 
-    printf("Maior numero: %d\n", maior);
-    printf("Menor numero: %d\n", menor);
-    printf("Media dos numeros: %.2f\n", media);
+    printf("Total de imposto: %.2f", sal * imposto);
 
     return 0;
 }

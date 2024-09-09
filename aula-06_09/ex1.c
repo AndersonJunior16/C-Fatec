@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
-    int tab, i;
-    printf("Digite um numero para a tabuada:\n");
-    scanf("%d", &tab);
+    setlocale(LC_ALL,"");
+    float reais = 0.0;
+    float cotacao_dolar = 0.0;
+    scanf("%f", &reais);
+    scanf("%f", &cotacao_dolar);
 
-    printf("Tabuada do %d: \n", tab);
-    for (i=0;i<=10;i++) {
-        printf("%d X %d = %d \n", i, tab, i * tab);
-    }
+    printf("O valor em dolares é: %.2f", reais * cotacao_dolar);
+
 
     return 0;
 }
