@@ -8,7 +8,7 @@ int main() {
         scanf("%d", &vet[i]);
         }
     vetsoma[0] = vet[0];
-    for (i=0; i < 8; i++){
+    for (i=1; i < 8; i++){
         vetsoma[i] = vetsoma[i -1] + vet[i];
     }
     printf("Soma cumulativa: ");
