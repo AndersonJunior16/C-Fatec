@@ -2,7 +2,7 @@
 #include <locale.h>
 int main() {
     setlocale(LC_ALL,"");
-    printf("Olá, Mundo!");
+    printf("Ola, Mundo!");
     return 0;
 }
 
