@@ -2,7 +2,7 @@
 
 int main() {
     int i, j, result = 0,
-    mat[3][2], mat_dois[3][3];
+    mat[3][3], mat_dois[3][3];
 
     puts("Primeira matriz: ");
     for (i=0; i < 3; i++){
