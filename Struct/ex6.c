@@ -8,7 +8,7 @@ typedef struct{
     float valor;
 } Produto;
 
-#define TAM 2
+#define TAM 5
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
@@ -17,7 +17,7 @@ int main(){
     Produto produto[TAM];
 
     for (i = 0; i < TAM; i++){
-        printf("----%dº Produto----\n", i + 1);
+        printf("----%dÂº Produto----\n", i + 1);
 
         printf("Nome: ");
         fgets(produto[i].nome, 50, stdin);
