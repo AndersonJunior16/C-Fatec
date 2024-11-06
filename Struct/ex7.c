@@ -12,6 +12,33 @@ typedef struct{
 
 } Aluno;
 
+void armazenar_aluno(Aluno *aluno);
+float calc_media(Aluno *aluno);
+void imprimir_aluno(Aluno aluno);
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    int i;
+
+    Aluno aluno[TAM];
+
+    for (i = 0; i < TAM; i++){
+
+        armazenar_aluno(&aluno[i]);
+        printf("\n");
+    }
+
+    printf("\nDados dos alunos e suas medias:\n");
+    for (i = 0; i < TAM; i++){
+        printf("Aluno %d:\t", i + 1);
+        imprimir_aluno(aluno[i]);
+
+    }
+
+    
+    return 0;
+}
 
 void armazenar_aluno(Aluno *aluno){
     int i;
@@ -48,26 +75,3 @@ void imprimir_aluno(Aluno aluno){
 
 }
 
-int main(){
-    setlocale(LC_ALL, "Portuguese");
-
-    int i;
-
-    Aluno aluno[TAM];
-
-    for (i = 0; i < TAM; i++){
-
-        armazenar_aluno(&aluno[i]);
-        printf("\n");
-    }
-
-    printf("\nDados dos alunos e suas medias:\n");
-    for (i = 0; i < TAM; i++){
-        printf("Aluno %d:\t", i + 1);
-        imprimir_aluno(aluno[i]);
-
-    }
-
-    
-    return 0;
-}
