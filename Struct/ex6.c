@@ -8,6 +8,8 @@ typedef struct{
     float valor;
 } Produto;
 
+float calcular_total(Produto produto[], int tamanho);
+
 #define TAM 5
 
 int main(){
@@ -35,6 +37,22 @@ int main(){
         printf("Prduto %d:\tNome: %s\tValor: %.2f\n", i + 1, produto[i].nome, produto[i].valor);
     }
 
+    float total = calcular_total(produto, TAM);
+    printf("\nPreço total: %.2f", total);
+
     
     return 0;
+}
+
+float calcular_total(Produto produto[], int tamanho){
+
+    float total = 0.0;
+    int i;
+
+    for (i = 0; i < tamanho; i++){
+        total += produto[i].valor;
+    }
+
+    return total;
+
 }
