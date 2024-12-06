@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-#define MAX 2
+#define MAX 5
 
 typedef struct{
     char nome[50];
@@ -13,7 +13,7 @@ typedef struct{
 
 void cadastrar_aluno(Aluno aluno[]){
     for (int i = 0; i < MAX; i++){
-        printf("%dº - Aluno", i + 1);
+        printf("%dï¿½ - Aluno", i + 1);
 
         printf("\nDigite o nome do aluno: ");
         fgets(aluno[i].nome, 50, stdin);
@@ -33,7 +33,7 @@ void cadastrar_aluno(Aluno aluno[]){
 
 void mostrar_alunos(Aluno aluno[]){
     for (int i = 0; i < MAX; i++){
-        printf("\n-=-=-=-%dº Aluno-=-=-=-\n", i + 1);
+        printf("\n-=-=-=-%dï¿½ Aluno-=-=-=-\n", i + 1);
         printf("Nome: %s\n", aluno[i].nome);
         printf("Idade: %d\n", aluno[i].idade);
         printf("Nota: %.2f\n", aluno[i].nota);
@@ -70,7 +70,7 @@ int main(){
         printf("2 - Mostrar alunos\n");
         printf("3 - Mostrar aluno de maior nota\n");
         printf("0 - Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opï¿½ï¿½o: ");
         scanf("%d", &opcao);
         setbuf(stdin, NULL);
 
@@ -93,7 +93,7 @@ int main(){
                 break;  
             default:
                 system("cls");
-                printf("Opção invalida");             
+                printf("Opï¿½ï¿½o invalida");             
             }
     }while (opcao != 0);
     return 0;
